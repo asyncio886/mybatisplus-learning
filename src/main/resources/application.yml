@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      strict: true
+      datasource:
+        master:
+          username: root
+          url: jdbc:mysql://localhost:3306/plus
+          password: 377641Wyt
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+          druid:
+            initial-size: 5
+            max-wait: 6000
+        test:
+          username: root
+          url: jdbc:mysql://localhost:3306/blog
+          password: 377641Wyt
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+          druid:
+            initial-size: 5
+            max-wait: 6000
+mybatis-plus:
+  mapper-locations: classpath:/mappers/*.xml
